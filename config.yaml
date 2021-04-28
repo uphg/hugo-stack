@@ -1,0 +1,134 @@
+baseurl: https://uphg.github.io/hugo-stack
+languageCode: zh-CN
+theme: hugo-theme-stack
+paginate: 5
+title: 玛卡巴卡
+
+# Change it to your Disqus shortname before using
+disqusShortname: hugo-theme-stack
+
+# GA Tracking ID
+googleAnalytics:
+
+# Theme i18n support
+# Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl
+DefaultContentLanguage: zh-cn
+
+permalinks:
+    post: /p/:slug/
+    page: /:slug/
+
+params:
+    mainSections:
+        - post
+    featuredImageField: image
+    rssFullContent: true
+    favicon:
+
+    footer:
+        since: 2020
+        customText:
+
+    # 配置参考：https://gohugo.io/functions/format/
+    dateFormat:
+        published: "2006-01-02"
+        lastUpdated: "2006-01-02"
+
+    sidebar:
+        emoji: 🍥
+        subtitle: Wonderful garden world
+        avatar:
+            local: true
+            src: img/avatar.jpg
+
+    article:
+        math: false
+        license:
+            enabled: true
+            default: Licensed under CC BY-NC-SA 4.0
+
+    comments:
+        enabled: false
+        provider: disqus
+
+        utterances:
+            repo:
+            issueTerm: pathname
+            label:
+
+        remark42:
+            host:
+            site:
+            locale:
+
+        vssue:
+            platform:
+            owner:
+            repo:
+            clientId:
+            clientSecret:
+
+    widgets:
+        # enabled:
+        #     - search
+        #     - archives
+        #     - tag-cloud
+
+        # archives:
+        #     limit: 5
+
+        # tagCloud:
+        #     limit: 10
+
+    opengraph:
+        twitter:
+            # Your Twitter username
+            site:
+
+            # Available values: summary, summary_large_image
+            card: summary_large_image
+
+    defaultImage:
+        opengraph:
+            enabled: false
+            local: false
+            src:
+
+    colorScheme:
+        # 显示主题切换按钮
+        toggle: true
+
+        # Available values: auto, light, dark
+        default: auto
+
+    imageProcessing:
+        cover:
+            enabled: true
+        content:
+            enabled: true
+
+### Custom menu
+### 配置参考：https://docs.stack.jimmycai.com/v/zh-cn/configuration/zi-ding-yi-cai-dan
+### To remove about, archive and search page menu item, remove `menu` field from their FrontMatter
+menu:
+    main:
+        - identifier: home
+          name: 首页
+          url: /
+          weight: -100
+          pre: home
+
+related:
+    includeNewer: true
+    threshold: 60
+    toLower: false
+    indices:
+        - name: tags
+          weight: 100
+
+        - name: categories
+          weight: 200
+
+markup:
+    highlight:
+        noClasses: false
